@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Aneeqah Zeeya's Little Space</title>
+
+<style>
+:root{
+    --baby-pink:#ffc1d6;
+    --light-pink:#ffe8f0;
+    --soft-pink:#fff5f8;
+    --dark-pink:#d94f7d;
+    --text:#704b5a;
+    --border:#f0a7c0;
+    --white:#ffffff;
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#fff8fb,#ffeef5);
+    color:var(--text);
+    min-height:100vh;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app{
+    display:flex;
+    min-height:100vh;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:230px;
+    min-height:100vh;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    background:linear-gradient(
+        #ffd8e5,
+        #ffc1d6
+    );
+
+    border-right:3px solid var(--border);
+
+    padding:22px 14px;
+
+    z-index:10;
+}
+
+.brand{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.brand .flower{
+    font-size:43px;
+}
+
+.brand h2{
+    color:var(--dark-pink);
+    font-size:17px;
+    line-height:1.3;
+}
+
+.brand p{
+    font-size:11px;
+    margin-top:5px;
+    color:#9d6579;
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.nav button{
+
+    width:100%;
+
+    padding:12px 14px;
+
+    border-radius:18px;
+
+    border:2px solid #e99ab7;
+
+    background:#fff8fb;
+
+    color:#a54869;
+
+    font-weight:700;
+
+    text-align:left;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 4px 10px rgba(190,80,120,.12);
+
+    transition:.2s;
+}
+
+.nav button:hover{
+
+    background:#ffd9e6;
+
+    transform:translateY(-2px);
+}
+
+.nav button.active{
+
+    background:#ff9fbe;
+
+    color:white;
+
+    border-color:#d9789b;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main{
+
+    margin-left:230px;
+
+    width:calc(100% - 230px);
+
+    padding:20px;
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd0df,
+            #fff0f5
+        );
+
+    border:3px solid #efa5bf;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    box-shadow:
+        0 10px 25px rgba(190,80,120,.13);
+}
+
+.header h1{
+
+    color:var(--dark-pink);
+
+    font-size:32px;
+
+    text-shadow:
+        2px 2px white;
+}
+
+.header p{
+
+    margin-top:6px;
+
+    color:#9e6377;
+
+}
+
+.decor{
+
+    position:absolute;
+
+    font-size:25px;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+.decor.one{
+    left:5%;
+    top:10px;
+}
+
+.decor.two{
+    right:7%;
+    top:12px;
+}
+
+.decor.three{
+    left:12%;
+    bottom:8px;
+}
+
+.decor.four{
+    right:14%;
+    bottom:8px;
+}
+
+@keyframes float{
+
+    50%{
+        transform:
+            translateY(-8px)
+            rotate(8deg);
+    }
+
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:15px;
+
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card{
+
+    background:white;
+
+    border:2px solid #f2bfd0;
+
+    border-radius:24px;
+
+    padding:18px;
+
+    box-shadow:
+        0 8px 20px rgba(190,80,120,.10);
+
+}
+
+.card h3{
+
+    color:var(--dark-pink);
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-number{
+
+    font-size:34px;
+
+    font-weight:900;
+
+    color:#e35783;
+
+    margin-bottom:9px;
+
+}
+
+.progress{
+
+    height:13px;
+
+    background:#f9e2ea;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.progress-bar{
+
+    height:100%;
+
+    width:0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9fbe,
+            #ffc5d8
+        );
+
+    border-radius:20px;
+
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.empty{
+
+    padding:17px;
+
+    text-align:center;
+
+    border-radius:17px;
+
+    border:2px dashed #efbfd0;
+
+    background:#fff8fb;
+
+    color:#ae7488;
+
+    font-size:13px;
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:850px){
+
+    .sidebar{
+
+        width:75px;
+
+        padding:15px 8px;
+
+    }
+
+    .brand h2,
+    .brand p{
+
+        display:none;
+
+    }
+
+    .brand .flower{
+
+        font-size:32px;
+
+    }
+
+    .nav button{
+
+        font-size:0;
+
+        text-align:center;
+
+        padding:12px 5px;
+
+    }
+
+    .nav button::first-letter{
+
+        font-size:22px;
+
+    }
+
+    .main{
+
+        margin-left:75px;
+
+        width:calc(100% - 75px);
+
+        padding:12px;
+
+    }
+
+    .dashboard{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .header h1{
+
+        font-size:24px;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="flower">
+            🌸
+        </div>
+
+        <h2>
+            Aneeqah Zeeya's<br>
+            Little Space
+        </h2>
+
+        <p>
+            Dream • Learn • Grow 💗
+        </p>
+
+    </div>
+
+
+    <nav class="nav">
+
+        <button class="active">
+            🏠 Home
+        </button>
+
+        <button>
+            ⏰ Schedule
+        </button>
+
+        <button>
+            📚 Subjects
+        </button>
+
+        <button>
+            📝 Notes
+        </button>
+
+        <button>
+            🌙 Sleep
+        </button>
+
+        <button>
+            📅 Calendar
+        </button>
+
+    </nav>
+
+</aside>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="main">
+
+
+    <header class="header">
+
+        <span class="decor one">
+            🌸
+        </span>
+
+        <span class="decor two">
+            💗
+        </span>
+
+        <span class="decor three">
+            💕
+        </span>
+
+        <span class="decor four">
+            ✨
+        </span>
+
+
+        <h1>
+            Aneeqah Zeeya's Little Space 🌸
+        </h1>
+
+        <p>
+            Dream • Learn • Grow • Shine 💗
+        </p>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================= -->
+
+    <section class="dashboard">
+
+
+        <!-- PROGRESS -->
+
+        <div class="card">
+
+            <h3>
+                🌸 Today's Progress
+            </h3>
+
+            <div class="progress-number">
+                0%
+            </div>
+
+            <div class="progress">
+
+                <div class="progress-bar">
+                </div>
+
+            </div>
+
+            <p style="margin-top:10px;font-size:13px;">
+                Let's do our best today! 💗
+            </p>
+
+        </div>
+
+
+        <!-- SCHEDULE -->
+
+        <div class="card">
+
+            <h3>
+                ⏰ Today's Schedule
+            </h3>
+
+            <div class="empty">
+
+                🌷 No schedule yet
+
+                <br><br>
+
+                We'll add Aneeqah's
+                schedule next!
+
+            </div>
+
+        </div>
+
+
+        <!-- SLEEP -->
+
+        <div class="card">
+
+            <h3>
+                🌙 Sleep Tracker
+            </h3>
+
+            <div class="empty">
+
+                💤 No sleep record yet
+
+                <br><br>
+
+                We'll add the tracker
+                next!
+
+            </div>
+
+        </div>
+
+
+        <!-- SUBJECTS -->
+
+        <div class="card">
+
+            <h3>
+                📚 My Subjects
+            </h3>
+
+            <div class="empty">
+
+                🇬🇧 English
+                <br>
+
+                ➗ Math
+                <br>
+
+                🇵🇭 Filipino
+                <br>
+
+                🌏 Makabansa
+                <br>
+
+                💗 GMRC
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTES -->
+
+        <div class="card">
+
+            <h3>
+                📝 Recent Notes
+            </h3>
+
+            <div class="empty">
+
+                💌 No notes yet
+
+                <br><br>
+
+                Mommy can add notes
+                here soon! 🌸
+
+            </div>
+
+        </div>
+
+
+        <!-- BREAK TIMER -->
+
+        <div class="card">
+
+            <h3>
+                🌸 Break Time
+            </h3>
+
+            <div class="empty">
+
+                ⏰ Timer coming soon!
+
+                <br><br>
+
+                Aneeqah can use it
+                during break time. 💗
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+</div>
+
+</body>
+</html>
