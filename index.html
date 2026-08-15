@@ -3,674 +3,2591 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6b4c8">
 
 <title>Aneeqah Zeeya's Little Space</title>
 
 <style>
-:root{
-    --baby-pink:#ffc1d6;
-    --light-pink:#ffe8f0;
-    --soft-pink:#fff5f8;
-    --dark-pink:#d94f7d;
-    --text:#704b5a;
-    --border:#f0a7c0;
-    --white:#ffffff;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
 }
 
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+:root{
+  --pink:#f6b4c8;
+  --pink2:#ffdce7;
+  --pink3:#fff1f6;
+  --dark:#b95878;
+  --text:#654b55;
+  --border:#edb1c5;
+  --white:#fff;
+  --green:#dff3e3;
+  --greenText:#4d8b5b;
+  --yellow:#fff1bd;
+  --yellowText:#92751d;
+  --red:#ffe0e7;
+  --redText:#b65b70;
 }
 
 body{
-    background:linear-gradient(135deg,#fff8fb,#ffeef5);
-    color:var(--text);
-    min-height:100vh;
+  min-height:100vh;
+  background:linear-gradient(135deg,#fffafd,#fff0f5);
+  color:var(--text);
 }
-
-/* =========================
-   APP
-========================= */
-
-.app{
-    display:flex;
-    min-height:100vh;
-}
-
-/* =========================
-   SIDEBAR
-========================= */
 
 .sidebar{
-    width:230px;
-    min-height:100vh;
-
-    position:fixed;
-    left:0;
-    top:0;
-
-    background:linear-gradient(
-        #ffd8e5,
-        #ffc1d6
-    );
-
-    border-right:3px solid var(--border);
-
-    padding:22px 14px;
-
-    z-index:10;
+  position:fixed;
+  left:0;
+  top:0;
+  bottom:0;
+  width:225px;
+  padding:18px 13px;
+  background:linear-gradient(180deg,#ffe2ec,#f6b4c8);
+  border-right:2px solid var(--border);
+  z-index:20;
 }
 
-.brand{
-    text-align:center;
-    margin-bottom:25px;
+.logo{
+  text-align:center;
+  margin-bottom:24px;
 }
 
-.brand .flower{
-    font-size:43px;
+.logo-icon{
+  font-size:42px;
 }
 
-.brand h2{
-    color:var(--dark-pink);
-    font-size:17px;
-    line-height:1.3;
+.logo h2{
+  color:var(--dark);
+  font-size:17px;
+  line-height:1.3;
 }
 
-.brand p{
-    font-size:11px;
-    margin-top:5px;
-    color:#9d6579;
+.logo small{
+  color:#9c6d7c;
 }
-
-/* =========================
-   NAV
-========================= */
 
 .nav{
-    display:flex;
-    flex-direction:column;
-    gap:9px;
+  display:flex;
+  flex-direction:column;
+  gap:9px;
 }
 
 .nav button{
-
-    width:100%;
-
-    padding:12px 14px;
-
-    border-radius:18px;
-
-    border:2px solid #e99ab7;
-
-    background:#fff8fb;
-
-    color:#a54869;
-
-    font-weight:700;
-
-    text-align:left;
-
-    cursor:pointer;
-
-    box-shadow:
-        0 4px 10px rgba(190,80,120,.12);
-
-    transition:.2s;
+  width:100%;
+  padding:12px 14px;
+  border:2px solid #df9fb5;
+  border-radius:16px;
+  background:#fff8fb;
+  color:#884f64;
+  font-weight:700;
+  text-align:left;
+  cursor:pointer;
+  transition:.2s;
 }
 
 .nav button:hover{
-
-    background:#ffd9e6;
-
-    transform:translateY(-2px);
+  transform:translateX(2px);
+  background:#ffeaf1;
 }
 
 .nav button.active{
-
-    background:#ff9fbe;
-
-    color:white;
-
-    border-color:#d9789b;
+  background:#dc829f;
+  border-color:#cf7190;
+  color:white;
 }
-
-/* =========================
-   MAIN
-========================= */
 
 .main{
-
-    margin-left:230px;
-
-    width:calc(100% - 230px);
-
-    padding:20px;
-
+  margin-left:225px;
+  width:calc(100% - 225px);
+  padding:16px;
+  max-width:1500px;
 }
 
-/* =========================
-   HEADER
-========================= */
-
 .header{
-
-    position:relative;
-
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ffd0df,
-            #fff0f5
-        );
-
-    border:3px solid #efa5bf;
-
-    border-radius:30px;
-
-    padding:25px;
-
-    text-align:center;
-
-    margin-bottom:18px;
-
-    box-shadow:
-        0 10px 25px rgba(190,80,120,.13);
+  position:relative;
+  text-align:center;
+  padding:24px 15px;
+  margin-bottom:16px;
+  border:2px solid var(--border);
+  border-radius:27px;
+  background:linear-gradient(135deg,#ffd9e5,#fff8fb);
+  overflow:hidden;
+  box-shadow:0 8px 25px #c8789215;
 }
 
 .header h1{
-
-    color:var(--dark-pink);
-
-    font-size:32px;
-
-    text-shadow:
-        2px 2px white;
+  color:var(--dark);
+  font-size:clamp(23px,4vw,35px);
 }
 
 .header p{
-
-    margin-top:6px;
-
-    color:#9e6377;
-
+  color:#9a7581;
+  margin-top:5px;
+  font-size:13px;
 }
 
-.decor{
-
-    position:absolute;
-
-    font-size:25px;
-
-    animation:float 3s ease-in-out infinite;
+.floating{
+  position:absolute;
+  font-size:23px;
 }
 
-.decor.one{
-    left:5%;
-    top:10px;
+.f1{left:7%;top:10px}
+.f2{right:7%;top:10px}
+.f3{left:13%;bottom:8px}
+.f4{right:13%;bottom:8px}
+
+.page{
+  display:none;
 }
 
-.decor.two{
-    right:7%;
-    top:12px;
+.page.active{
+  display:block;
 }
 
-.decor.three{
-    left:12%;
-    bottom:8px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
 }
 
-.decor.four{
-    right:14%;
-    bottom:8px;
+.grid2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
-
-@keyframes float{
-
-    50%{
-        transform:
-            translateY(-8px)
-            rotate(8deg);
-    }
-
-}
-
-/* =========================
-   DASHBOARD
-========================= */
-
-.dashboard{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:15px;
-
-}
-
-/* =========================
-   CARDS
-========================= */
 
 .card{
-
-    background:white;
-
-    border:2px solid #f2bfd0;
-
-    border-radius:24px;
-
-    padding:18px;
-
-    box-shadow:
-        0 8px 20px rgba(190,80,120,.10);
-
+  background:white;
+  border:2px solid #f0c6d4;
+  border-radius:21px;
+  padding:16px;
+  margin-bottom:14px;
+  box-shadow:0 7px 20px #c8789210;
 }
 
+.card h2,
 .card h3{
-
-    color:var(--dark-pink);
-
-    margin-bottom:12px;
-
-    font-size:17px;
-
+  color:var(--dark);
+  margin-bottom:8px;
 }
 
-/* =========================
-   PROGRESS
-========================= */
+.muted{
+  color:#9c7b86;
+  font-size:12px;
+}
 
-.progress-number{
+.big{
+  color:var(--dark);
+  font-size:30px;
+  font-weight:900;
+}
 
-    font-size:34px;
+.row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+}
 
-    font-weight:900;
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:8px;
+}
 
-    color:#e35783;
+.btn{
+  border:2px solid #df91ad;
+  border-radius:13px;
+  background:#ffc7d8;
+  color:#81455c;
+  padding:8px 12px;
+  font-weight:750;
+  cursor:pointer;
+  min-height:38px;
+  transition:.15s;
+  white-space:nowrap;
+}
 
-    margin-bottom:9px;
+.btn:hover{
+  transform:translateY(-1px);
+  filter:brightness(.98);
+}
 
+.btn.green{
+  background:var(--green);
+  border-color:#a7d5af;
+  color:var(--greenText);
+}
+
+.btn.yellow{
+  background:var(--yellow);
+  border-color:#dec96d;
+  color:var(--yellowText);
+}
+
+.btn.danger{
+  background:var(--red);
+  border-color:#e0a3b1;
+  color:var(--redText);
+}
+
+.btn.white{
+  background:white;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  margin-top:5px;
+  padding:10px;
+  border:2px solid #efc6d3;
+  border-radius:13px;
+  background:#fffafb;
+  color:var(--text);
+  outline:none;
+}
+
+textarea{
+  min-height:100px;
+  resize:vertical;
+}
+
+label{
+  display:block;
+  color:#957480;
+  font-size:12px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:10px;
 }
 
 .progress{
-
-    height:13px;
-
-    background:#f9e2ea;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
+  width:100%;
+  height:11px;
+  background:#f5e5ea;
+  border-radius:20px;
+  overflow:hidden;
 }
 
 .progress-bar{
-
-    height:100%;
-
-    width:0%;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ff9fbe,
-            #ffc5d8
-        );
-
-    border-radius:20px;
-
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#e68daa,#ffc5d6);
+  border-radius:20px;
+  transition:.3s;
 }
 
-/* =========================
-   EMPTY
-========================= */
+.item{
+  background:#fff8fa;
+  border:1px solid #f1d1dc;
+  border-radius:15px;
+  padding:11px;
+  margin-top:9px;
+}
+
+.item.done{
+  opacity:.55;
+}
+
+.item.done .title{
+  text-decoration:line-through;
+}
+
+.tag{
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:20px;
+  background:#ffe2eb;
+  color:#93566b;
+  font-size:11px;
+  font-weight:700;
+}
 
 .empty{
-
-    padding:17px;
-
-    text-align:center;
-
-    border-radius:17px;
-
-    border:2px dashed #efbfd0;
-
-    background:#fff8fb;
-
-    color:#ae7488;
-
-    font-size:13px;
-
+  padding:18px;
+  text-align:center;
+  border:2px dashed #eec3d1;
+  border-radius:16px;
+  background:#fff9fb;
+  color:#a17b87;
 }
 
-/* =========================
-   MOBILE
-========================= */
+.school-box{
+  padding:14px;
+  margin-bottom:14px;
+  border:2px solid var(--border);
+  border-radius:18px;
+  background:linear-gradient(135deg,#ffe5ed,#fff9fb);
+}
+
+.subject-card{
+  position:relative;
+}
+
+.subject-icon{
+  font-size:32px;
+}
+
+.timer{
+  text-align:center;
+  padding:20px;
+  border:2px solid #efb5c9;
+  border-radius:20px;
+  background:linear-gradient(135deg,#fff0f5,#ffe0ea);
+}
+
+.timer-number{
+  color:var(--dark);
+  font-size:50px;
+  font-weight:900;
+  margin-bottom:8px;
+}
+
+.calendar{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:5px;
+}
+
+.calendar th{
+  font-size:11px;
+  color:#9b6e7d;
+}
+
+.calendar td{
+  height:43px;
+  text-align:center;
+  background:#fff8fa;
+  border:1px solid #f0d2dc;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+.calendar td:hover{
+  background:#ffe0ea;
+}
+
+.calendar td.today{
+  background:#e797b2;
+  color:white;
+  font-weight:bold;
+}
 
 @media(max-width:850px){
+  .sidebar{
+    width:68px;
+    padding:12px 6px;
+  }
 
-    .sidebar{
+  .logo h2,
+  .logo small{
+    display:none;
+  }
 
-        width:75px;
+  .logo-icon{
+    font-size:30px;
+  }
 
-        padding:15px 8px;
+  .nav button{
+    font-size:0;
+    text-align:center;
+    padding:11px 3px;
+  }
 
-    }
+  .nav button::first-letter{
+    font-size:21px;
+  }
 
-    .brand h2,
-    .brand p{
+  .main{
+    margin-left:68px;
+    width:calc(100% - 68px);
+  }
 
-        display:none;
-
-    }
-
-    .brand .flower{
-
-        font-size:32px;
-
-    }
-
-    .nav button{
-
-        font-size:0;
-
-        text-align:center;
-
-        padding:12px 5px;
-
-    }
-
-    .nav button::first-letter{
-
-        font-size:22px;
-
-    }
-
-    .main{
-
-        margin-left:75px;
-
-        width:calc(100% - 75px);
-
-        padding:12px;
-
-    }
-
-    .dashboard{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .header h1{
-
-        font-size:24px;
-
-    }
-
+  .grid{
+    grid-template-columns:1fr 1fr;
+  }
 }
 
+@media(max-width:600px){
+  .grid,
+  .grid2{
+    grid-template-columns:1fr;
+  }
+
+  .main{
+    padding:10px;
+  }
+
+  .row{
+    align-items:flex-start;
+  }
+
+  .actions{
+    width:100%;
+  }
+
+  .actions .btn{
+    flex:1;
+  }
+}
 </style>
 </head>
 
-
 <body>
-
-<div class="app">
-
-<!-- =========================
-     SIDEBAR
-========================= -->
 
 <aside class="sidebar">
 
-    <div class="brand">
+  <div class="logo">
+    <div class="logo-icon">🎀</div>
+    <h2>Aneeqah<br>Zeeya</h2>
+    <small>learn • grow • shine</small>
+  </div>
 
-        <div class="flower">
-            🌸
-        </div>
+  <nav class="nav">
 
-        <h2>
-            Aneeqah Zeeya's<br>
-            Little Space
-        </h2>
+    <button data-page="home" class="active">🏡 Home</button>
+    <button data-page="schedule">🎀 Schedule</button>
+    <button data-page="subjects">📚 Subjects</button>
+    <button data-page="notes">💌 Notes</button>
+    <button data-page="savings">🪙 Savings</button>
+    <button data-page="sleep">🌙 Sleep</button>
+    <button data-page="calendar">🗓️ Calendar</button>
 
-        <p>
-            Dream • Learn • Grow 💗
-        </p>
-
-    </div>
-
-
-    <nav class="nav">
-
-        <button class="active">
-            🏠 Home
-        </button>
-
-        <button>
-            ⏰ Schedule
-        </button>
-
-        <button>
-            📚 Subjects
-        </button>
-
-        <button>
-            📝 Notes
-        </button>
-
-        <button>
-            🌙 Sleep
-        </button>
-
-        <button>
-            📅 Calendar
-        </button>
-
-    </nav>
+  </nav>
 
 </aside>
 
 
-<!-- =========================
-     MAIN
-========================= -->
-
 <main class="main">
 
+<header class="header">
 
-    <header class="header">
+  <span class="floating f1">🌷</span>
+  <span class="floating f2">✨</span>
+  <span class="floating f3">🧸</span>
+  <span class="floating f4">🎀</span>
 
-        <span class="decor one">
-            🌸
-        </span>
+  <h1>Aneeqah Zeeya's Little Space</h1>
 
-        <span class="decor two">
-            💗
-        </span>
+  <p>A little space for learning, dreams and happy moments ♡</p>
 
-        <span class="decor three">
-            💕
-        </span>
-
-        <span class="decor four">
-            ✨
-        </span>
+</header>
 
 
-        <h1>
-            Aneeqah Zeeya's Little Space 🌸
-        </h1>
+<!-- HOME -->
+<section id="home" class="page active">
 
-        <p>
-            Dream • Learn • Grow • Shine 💗
+  <div class="grid">
+
+    <div class="card">
+      <h3>🌷 Today's Progress</h3>
+      <div class="big" id="progressText">0%</div>
+
+      <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <p class="muted" id="progressSub">
+        Ready for a lovely day!
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎀 Next Activity</h3>
+      <div class="big" id="nextActivity">—</div>
+      <p class="muted" id="nextTime">No activity yet.</p>
+    </div>
+
+    <div class="card">
+      <h3>🪙 Savings</h3>
+      <div class="big" id="homeSaved">₱0.00</div>
+      <p class="muted" id="homeGoals">No goals yet.</p>
+    </div>
+
+  </div>
+
+
+  <div class="grid2">
+
+    <div class="card">
+      <div class="row">
+        <h3>🎀 Today's Schedule</h3>
+        <button class="btn" id="openSchedule">Open</button>
+      </div>
+
+      <div id="homeSchedule"></div>
+    </div>
+
+
+    <div class="card">
+      <h3>⏳ Break Time</h3>
+
+      <div class="timer">
+
+        <div class="timer-number" id="timerHome">
+          15:00
+        </div>
+
+        <div class="actions">
+
+          <button class="btn" id="startHome">Start</button>
+          <button class="btn yellow" id="pauseHome">Pause</button>
+          <button class="btn white" id="resetHome">Reset</button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="grid2">
+
+    <div class="card">
+      <div class="row">
+        <h3>📚 Subjects</h3>
+        <button class="btn" id="openSubjects">Open</button>
+      </div>
+
+      <div id="homeSubjects"></div>
+    </div>
+
+
+    <div class="card">
+      <div class="row">
+        <h3>💌 Recent Notes</h3>
+        <button class="btn" id="openNotes">Open</button>
+      </div>
+
+      <div id="homeNotes"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SCHEDULE -->
+<section id="schedule" class="page">
+
+  <div class="card">
+
+    <h2>🎀 Zeeya's Schedule</h2>
+
+    <p class="muted">
+      Add school, study time, breaks and routines.
+    </p>
+
+    <form id="scheduleForm">
+
+      <div class="form-grid">
+
+        <label>
+          Date
+          <input type="date" id="scheduleDate" required>
+        </label>
+
+        <label>
+          Time
+          <input type="time" id="scheduleTime" required>
+        </label>
+
+        <label>
+          Activity
+          <input type="text" id="scheduleTitle"
+                 placeholder="Example: Math homework" required>
+        </label>
+
+        <label>
+          Type
+          <select id="scheduleType">
+            <option>School</option>
+            <option>Study</option>
+            <option>Break</option>
+            <option>Routine</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">
+          ＋ Add Schedule
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+  <div class="card">
+    <h3>🎀 Today's Activities</h3>
+    <div id="scheduleList"></div>
+  </div>
+
+
+  <div class="card">
+
+    <h3>⏳ Break Timer</h3>
+
+    <div class="timer">
+
+      <div class="timer-number" id="timerSchedule">
+        15:00
+      </div>
+
+      <div class="actions">
+
+        <button class="btn" id="startSchedule">Start</button>
+        <button class="btn yellow" id="pauseSchedule">Pause</button>
+        <button class="btn white" id="resetSchedule">Reset</button>
+
+      </div>
+
+      <div class="actions">
+
+        <button class="btn white timerChoice" data-min="5">5 min</button>
+        <button class="btn white timerChoice" data-min="10">10 min</button>
+        <button class="btn white timerChoice" data-min="15">15 min</button>
+        <button class="btn white timerChoice" data-min="20">20 min</button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SUBJECTS -->
+<section id="subjects" class="page">
+
+  <div class="school-box">
+
+    <div class="row">
+
+      <div>
+        <h2>📚 Aneeqah's Subjects</h2>
+
+        <p class="muted">
+          <b id="gradeDisplay">Grade 2</b>
+          ·
+          <b id="yearDisplay">SY 2026–2027</b>
         </p>
+      </div>
 
-    </header>
+      <button class="btn" id="schoolSettings">
+        🎓 School Settings
+      </button>
 
+    </div>
 
-    <!-- =========================
-         DASHBOARD
-    ========================= -->
+  </div>
 
-    <section class="dashboard">
 
+  <div class="card">
 
-        <!-- PROGRESS -->
+    <div class="row">
 
-        <div class="card">
+      <div>
+        <h3>🎀 Manage Subjects</h3>
 
-            <h3>
-                🌸 Today's Progress
-            </h3>
+        <p class="muted">
+          Change subjects anytime.
+        </p>
+      </div>
 
-            <div class="progress-number">
-                0%
-            </div>
+      <button class="btn" id="addSubject">
+        ＋ Add Subject
+      </button>
 
-            <div class="progress">
+    </div>
 
-                <div class="progress-bar">
-                </div>
+    <div id="subjectManager"></div>
 
-            </div>
+  </div>
 
-            <p style="margin-top:10px;font-size:13px;">
-                Let's do our best today! 💗
-            </p>
 
-        </div>
+  <div class="grid2" id="subjectsContainer"></div>
 
+</section>
 
-        <!-- SCHEDULE -->
 
-        <div class="card">
+<!-- NOTES -->
+<section id="notes" class="page">
 
-            <h3>
-                ⏰ Today's Schedule
-            </h3>
+  <div class="card">
 
-            <div class="empty">
+    <h2>💌 Subject Notes</h2>
 
-                🌷 No schedule yet
+    <p class="muted">
+      Keep notes for each subject.
+    </p>
 
-                <br><br>
+    <form id="noteForm">
 
-                We'll add Aneeqah's
-                schedule next!
+      <div class="form-grid">
 
-            </div>
+        <label>
+          Subject
+          <select id="noteSubject"></select>
+        </label>
 
-        </div>
+        <label>
+          Date
+          <input type="date" id="noteDate" required>
+        </label>
 
+        <label>
+          Title
+          <input type="text" id="noteTitle"
+                 placeholder="Example: Bring notebook" required>
+        </label>
 
-        <!-- SLEEP -->
+      </div>
 
-        <div class="card">
+      <label style="margin-top:10px">
+        Note
+        <textarea id="noteText"
+                  placeholder="Write something here..."
+                  required></textarea>
+      </label>
 
-            <h3>
-                🌙 Sleep Tracker
-            </h3>
+      <div class="actions">
+        <button class="btn" type="submit">
+          💌 Save Note
+        </button>
+      </div>
 
-            <div class="empty">
+    </form>
 
-                💤 No sleep record yet
+  </div>
 
-                <br><br>
 
-                We'll add the tracker
-                next!
+  <div class="card">
+    <div id="notesList"></div>
+  </div>
 
-            </div>
+</section>
 
-        </div>
 
+<!-- SAVINGS -->
+<section id="savings" class="page">
 
-        <!-- SUBJECTS -->
+  <div class="card">
 
-        <div class="card">
+    <h2>🪙 Savings Corner</h2>
 
-            <h3>
-                📚 My Subjects
-            </h3>
+    <form id="savingsForm">
 
-            <div class="empty">
+      <div class="form-grid">
 
-                🇬🇧 English
-                <br>
+        <label>
+          Goal
+          <input type="text" id="goalName"
+                 placeholder="Example: New bag" required>
+        </label>
 
-                ➗ Math
-                <br>
+        <label>
+          Target
+          <input type="number" id="goalTarget"
+                 min="1" step=".01"
+                 placeholder="₱0" required>
+        </label>
 
-                🇵🇭 Filipino
-                <br>
+        <label>
+          Starting Amount
+          <input type="number" id="goalStarting"
+                 min="0" step=".01" value="0">
+        </label>
 
-                🌏 Makabansa
-                <br>
+      </div>
 
-                💗 GMRC
+      <div class="actions">
+        <button class="btn" type="submit">
+          ＋ Create Goal
+        </button>
+      </div>
 
-            </div>
+    </form>
 
-        </div>
+  </div>
 
 
-        <!-- NOTES -->
+  <div class="grid">
 
-        <div class="card">
+    <div class="card">
+      <h3>🪙 Total Saved</h3>
+      <div class="big" id="totalSaved">₱0.00</div>
+    </div>
 
-            <h3>
-                📝 Recent Notes
-            </h3>
+    <div class="card">
+      <h3>🎯 Total Target</h3>
+      <div class="big" id="totalTarget">₱0.00</div>
+    </div>
 
-            <div class="empty">
+    <div class="card">
+      <h3>🌷 Progress</h3>
+      <div class="big" id="savingPercent">0%</div>
 
-                💌 No notes yet
+      <div class="progress">
+        <div class="progress-bar" id="savingBar"></div>
+      </div>
+    </div>
 
-                <br><br>
+  </div>
 
-                Mommy can add notes
-                here soon! 🌸
 
-            </div>
+  <div class="card">
+    <h3>🎀 My Goals</h3>
+    <div id="savingsList"></div>
+  </div>
 
-        </div>
+</section>
 
 
-        <!-- BREAK TIMER -->
+<!-- SLEEP -->
+<section id="sleep" class="page">
 
-        <div class="card">
+  <div class="card">
 
-            <h3>
-                🌸 Break Time
-            </h3>
+    <h2>🌙 Sleep Tracker</h2>
 
-            <div class="empty">
+    <form id="sleepForm">
 
-                ⏰ Timer coming soon!
+      <div class="form-grid">
 
-                <br><br>
+        <label>
+          Date
+          <input type="date" id="sleepDate" required>
+        </label>
 
-                Aneeqah can use it
-                during break time. 💗
+        <label>
+          Bedtime
+          <input type="time" id="bedTime" required>
+        </label>
 
-            </div>
+        <label>
+          Wake-up
+          <input type="time" id="wakeTime" required>
+        </label>
 
-        </div>
+      </div>
 
+      <label style="margin-top:10px">
+        Note
+        <textarea id="sleepNote"
+                  placeholder="How was her sleep?"></textarea>
+      </label>
 
-    </section>
+      <div class="actions">
+        <button class="btn" type="submit">
+          🌙 Save Sleep
+        </button>
+      </div>
+
+    </form>
+
+  </div>
+
+
+  <div class="grid2">
+
+    <div class="card">
+
+      <h3>⭐ Sleep Goal</h3>
+
+      <label>
+        Hours
+        <input type="number" id="sleepGoal"
+               min="1" max="24" step=".5">
+      </label>
+
+      <div class="actions">
+        <button class="btn yellow" id="saveSleepGoal">
+          Save Goal
+        </button>
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>🌷 Average Sleep</h3>
+
+      <div class="big" id="averageSleep">
+        0h 00m
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="card">
+    <h3>🌙 Sleep History</h3>
+    <div id="sleepList"></div>
+  </div>
+
+</section>
+
+
+<!-- CALENDAR -->
+<section id="calendar" class="page">
+
+  <div class="card">
+
+    <h2>🗓️ Little Calendar</h2>
+
+    <input type="month" id="calendarMonth">
+
+  </div>
+
+  <div class="card">
+
+    <div id="calendarBox"></div>
+
+    <div id="calendarDetails"></div>
+
+  </div>
+
+</section>
 
 </main>
 
-</div>
+
+<script>
+
+/* ===============================
+   DATA
+================================ */
+
+const defaultSubjects = [
+  {name:"English",icon:"📚"},
+  {name:"Math",icon:"🧮"},
+  {name:"Filipino",icon:"📕"},
+  {name:"Makabansa",icon:"🌏"},
+  {name:"GMRC",icon:"🌷"}
+];
+
+let school =
+JSON.parse(localStorage.getItem("aneeqa_school")) || {
+  grade:"Grade 2",
+  year:"2026–2027",
+  subjects:defaultSubjects
+};
+
+let schedules =
+JSON.parse(localStorage.getItem("aneeqa_schedules")) || [];
+
+let notes =
+JSON.parse(localStorage.getItem("aneeqa_notes")) || [];
+
+let savings =
+JSON.parse(localStorage.getItem("aneeqa_savings")) || [];
+
+let sleeps =
+JSON.parse(localStorage.getItem("aneeqa_sleeps")) || [];
+
+let tasks =
+JSON.parse(localStorage.getItem("aneeqa_tasks")) || {};
+
+let sleepGoal =
+Number(localStorage.getItem("aneeqa_sleep_goal")) || 9;
+
+school.subjects.forEach(s=>{
+  if(!Array.isArray(tasks[s.name])){
+    tasks[s.name]=[];
+  }
+});
+
+function save(){
+  localStorage.setItem("aneeqa_school",JSON.stringify(school));
+  localStorage.setItem("aneeqa_schedules",JSON.stringify(schedules));
+  localStorage.setItem("aneeqa_notes",JSON.stringify(notes));
+  localStorage.setItem("aneeqa_savings",JSON.stringify(savings));
+  localStorage.setItem("aneeqa_sleeps",JSON.stringify(sleeps));
+  localStorage.setItem("aneeqa_tasks",JSON.stringify(tasks));
+  localStorage.setItem("aneeqa_sleep_goal",sleepGoal);
+}
+
+function today(){
+  const d=new Date();
+  return d.getFullYear()+"-"+
+    String(d.getMonth()+1).padStart(2,"0")+"-"+
+    String(d.getDate()).padStart(2,"0");
+}
+
+function money(n){
+  return "₱"+Number(n||0).toLocaleString("en-PH",{
+    minimumFractionDigits:2,
+    maximumFractionDigits:2
+  });
+}
+
+function esc(x){
+  return String(x)
+    .replaceAll("&","&amp;")
+    .replaceAll("<","&lt;")
+    .replaceAll(">","&gt;")
+    .replaceAll('"',"&quot;")
+    .replaceAll("'","&#039;");
+}
+
+
+/* ===============================
+   NAVIGATION
+================================ */
+
+document.querySelectorAll(".nav button").forEach(button=>{
+  button.addEventListener("click",()=>{
+    openPage(button.dataset.page,button);
+  });
+});
+
+function openPage(page,button){
+
+  document.querySelectorAll(".page")
+    .forEach(p=>p.classList.remove("active"));
+
+  const target=document.getElementById(page);
+
+  if(target){
+    target.classList.add("active");
+  }
+
+  document.querySelectorAll(".nav button")
+    .forEach(b=>b.classList.remove("active"));
+
+  if(button){
+    button.classList.add("active");
+  }
+
+  renderAll();
+}
+
+
+/* HOME BUTTONS */
+
+document.getElementById("openSchedule")
+.addEventListener("click",()=>{
+  openPage("schedule",document.querySelector('[data-page="schedule"]'));
+});
+
+document.getElementById("openSubjects")
+.addEventListener("click",()=>{
+  openPage("subjects",document.querySelector('[data-page="subjects"]'));
+});
+
+document.getElementById("openNotes")
+.addEventListener("click",()=>{
+  openPage("notes",document.querySelector('[data-page="notes"]'));
+});
+
+
+/* ===============================
+   SCHOOL SETTINGS
+================================ */
+
+document.getElementById("schoolSettings")
+.addEventListener("click",()=>{
+
+  const grade=prompt(
+    "Grade Level:",
+    school.grade
+  );
+
+  if(grade===null)return;
+
+  const year=prompt(
+    "School Year:",
+    school.year
+  );
+
+  if(year===null)return;
+
+  school.grade=grade.trim() || school.grade;
+  school.year=year.trim() || school.year;
+
+  save();
+  renderAll();
+
+});
+
+
+/* ===============================
+   SUBJECTS
+================================ */
+
+document.getElementById("addSubject")
+.addEventListener("click",()=>{
+
+  const name=prompt("Subject name:");
+
+  if(!name || !name.trim())return;
+
+  if(school.subjects.some(
+    s=>s.name.toLowerCase()===name.trim().toLowerCase()
+  )){
+    alert("That subject already exists.");
+    return;
+  }
+
+  const icon=prompt(
+    "Choose an emoji:",
+    "📚"
+  ) || "📚";
+
+  school.subjects.push({
+    name:name.trim(),
+    icon:icon
+  });
+
+  tasks[name.trim()]=[];
+
+  save();
+  renderAll();
+
+});
+
+
+function editSubject(index){
+
+  const subject=school.subjects[index];
+
+  const newName=prompt(
+    "Subject name:",
+    subject.name
+  );
+
+  if(newName===null)return;
+
+  const clean=newName.trim();
+
+  if(!clean)return;
+
+  const newIcon=prompt(
+    "Subject emoji:",
+    subject.icon
+  );
+
+  if(clean!==subject.name){
+
+    tasks[clean]=tasks[subject.name] || [];
+    delete tasks[subject.name];
+
+    notes.forEach(n=>{
+      if(n.subject===subject.name){
+        n.subject=clean;
+      }
+    });
+  }
+
+  subject.name=clean;
+
+  if(newIcon && newIcon.trim()){
+    subject.icon=newIcon.trim();
+  }
+
+  save();
+  renderAll();
+}
+
+
+function deleteSubject(index){
+
+  if(school.subjects.length<=1){
+    alert("Keep at least one subject.");
+    return;
+  }
+
+  const subject=school.subjects[index];
+
+  if(!confirm(
+    "Delete "+subject.name+"?"
+  ))return;
+
+  delete tasks[subject.name];
+
+  notes=notes.filter(
+    n=>n.subject!==subject.name
+  );
+
+  school.subjects.splice(index,1);
+
+  save();
+  renderAll();
+}
+
+
+function addTask(index){
+
+  const subject=school.subjects[index];
+
+  const text=prompt(
+    "Task for "+subject.name+":"
+  );
+
+  if(!text || !text.trim())return;
+
+  if(!tasks[subject.name]){
+    tasks[subject.name]=[];
+  }
+
+  tasks[subject.name].push({
+    id:Date.now(),
+    text:text.trim(),
+    done:false
+  });
+
+  save();
+  renderAll();
+}
+
+
+function toggleTask(subject,id){
+
+  const task=(tasks[subject]||[])
+    .find(t=>t.id===id);
+
+  if(task){
+    task.done=!task.done;
+  }
+
+  save();
+  renderAll();
+}
+
+
+function deleteTask(subject,id){
+
+  tasks[subject]=(tasks[subject]||[])
+    .filter(t=>t.id!==id);
+
+  save();
+  renderAll();
+}
+
+
+/* ===============================
+   SCHEDULE
+================================ */
+
+document.getElementById("scheduleForm")
+.addEventListener("submit",e=>{
+
+  e.preventDefault();
+
+  schedules.push({
+    id:Date.now(),
+    date:document.getElementById("scheduleDate").value,
+    time:document.getElementById("scheduleTime").value,
+    title:document.getElementById("scheduleTitle").value.trim(),
+    type:document.getElementById("scheduleType").value,
+    done:false
+  });
+
+  e.target.reset();
+
+  document.getElementById("scheduleDate").value=today();
+
+  save();
+  renderAll();
+});
+
+
+function toggleSchedule(id){
+
+  const x=schedules.find(s=>s.id===id);
+
+  if(x)x.done=!x.done;
+
+  save();
+  renderAll();
+}
+
+
+function deleteSchedule(id){
+
+  schedules=schedules.filter(
+    s=>s.id!==id
+  );
+
+  save();
+  renderAll();
+}
+
+
+/* ===============================
+   NOTES
+================================ */
+
+document.getElementById("noteForm")
+.addEventListener("submit",e=>{
+
+  e.preventDefault();
+
+  notes.unshift({
+    id:Date.now(),
+    subject:document.getElementById("noteSubject").value,
+    date:document.getElementById("noteDate").value,
+    title:document.getElementById("noteTitle").value.trim(),
+    text:document.getElementById("noteText").value.trim()
+  });
+
+  e.target.reset();
+
+  document.getElementById("noteDate").value=today();
+
+  save();
+  renderAll();
+});
+
+
+function editNote(id){
+
+  const note=notes.find(n=>n.id===id);
+
+  if(!note)return;
+
+  const title=prompt(
+    "Title:",
+    note.title
+  );
+
+  if(title===null)return;
+
+  const text=prompt(
+    "Note:",
+    note.text
+  );
+
+  if(text===null)return;
+
+  note.title=title.trim();
+  note.text=text.trim();
+
+  save();
+  renderAll();
+}
+
+
+function deleteNote(id){
+
+  notes=notes.filter(n=>n.id!==id);
+
+  save();
+  renderAll();
+}
+
+
+/* ===============================
+   SAVINGS
+================================ */
+
+document.getElementById("savingsForm")
+.addEventListener("submit",e=>{
+
+  e.preventDefault();
+
+  const target=Number(
+    document.getElementById("goalTarget").value
+  );
+
+  const starting=Number(
+    document.getElementById("goalStarting").value
+  )||0;
+
+  if(target<=0)return;
+
+  savings.push({
+    id:Date.now(),
+    name:document.getElementById("goalName").value.trim(),
+    target:target,
+    current:Math.min(starting,target)
+  });
+
+  e.target.reset();
+
+  save();
+  renderAll();
+});
+
+
+function addMoney(id){
+
+  const goal=savings.find(x=>x.id===id);
+
+  if(!goal)return;
+
+  const amount=Number(
+    prompt("Amount to add:")
+  );
+
+  if(!amount || amount<=0)return;
+
+  goal.current=Math.min(
+    goal.target,
+    goal.current+amount
+  );
+
+  save();
+  renderAll();
+}
+
+
+function removeMoney(id){
+
+  const goal=savings.find(x=>x.id===id);
+
+  if(!goal)return;
+
+  const amount=Number(
+    prompt("Amount to remove:")
+  );
+
+  if(!amount || amount<=0)return;
+
+  goal.current=Math.max(
+    0,
+    goal.current-amount
+  );
+
+  save();
+  renderAll();
+}
+
+
+function editGoal(id){
+
+  const goal=savings.find(x=>x.id===id);
+
+  if(!goal)return;
+
+  const name=prompt(
+    "Goal name:",
+    goal.name
+  );
+
+  if(name===null)return;
+
+  const target=Number(
+    prompt(
+      "Target amount:",
+      goal.target
+    )
+  );
+
+  if(!target || target<=0)return;
+
+  goal.name=name.trim();
+  goal.target=target;
+
+  if(goal.current>target){
+    goal.current=target;
+  }
+
+  save();
+  renderAll();
+}
+
+
+function deleteGoal(id){
+
+  if(!confirm("Delete this savings goal?"))return;
+
+  savings=savings.filter(
+    x=>x.id!==id
+  );
+
+  save();
+  renderAll();
+}
+
+
+/* ===============================
+   SLEEP
+================================ */
+
+document.getElementById("sleepForm")
+.addEventListener("submit",e=>{
+
+  e.preventDefault();
+
+  const bed=document.getElementById("bedTime").value;
+  const wake=document.getElementById("wakeTime").value;
+
+  let a=toMinutes(bed);
+  let b=toMinutes(wake);
+
+  if(b<=a)b+=1440;
+
+  sleeps.unshift({
+    id:Date.now(),
+    date:document.getElementById("sleepDate").value,
+    bed:bed,
+    wake:wake,
+    duration:b-a,
+    note:document.getElementById("sleepNote").value.trim()
+  });
+
+  e.target.reset();
+
+  document.getElementById("sleepDate").value=today();
+
+  save();
+  renderAll();
+});
+
+
+function toMinutes(time){
+  const [h,m]=time.split(":").map(Number);
+  return h*60+m;
+}
+
+
+function sleepFormat(min){
+
+  const h=Math.floor(min/60);
+  const m=min%60;
+
+  return h+"h "+String(m).padStart(2,"0")+"m";
+}
+
+
+function deleteSleep(id){
+
+  sleeps=sleeps.filter(
+    x=>x.id!==id
+  );
+
+  save();
+  renderAll();
+}
+
+
+document.getElementById("saveSleepGoal")
+.addEventListener("click",()=>{
+
+  const value=Number(
+    document.getElementById("sleepGoal").value
+  );
+
+  if(value<1 || value>24){
+    alert("Choose 1–24 hours.");
+    return;
+  }
+
+  sleepGoal=value;
+
+  save();
+  renderAll();
+});
+
+
+/* ===============================
+   TIMER
+================================ */
+
+let timerSeconds=900;
+let timerInterval=null;
+
+function updateTimer(){
+
+  const min=Math.floor(timerSeconds/60);
+  const sec=timerSeconds%60;
+
+  const text=
+    String(min).padStart(2,"0")+
+    ":"+
+    String(sec).padStart(2,"0");
+
+  document.getElementById("timerHome").textContent=text;
+  document.getElementById("timerSchedule").textContent=text;
+}
+
+
+function startTimer(){
+
+  if(timerInterval)return;
+
+  timerInterval=setInterval(()=>{
+
+    if(timerSeconds<=0){
+
+      clearInterval(timerInterval);
+      timerInterval=null;
+
+      alert("Break time is finished! 🌷");
+
+      return;
+    }
+
+    timerSeconds--;
+    updateTimer();
+
+  },1000);
+}
+
+
+function pauseTimer(){
+
+  clearInterval(timerInterval);
+  timerInterval=null;
+}
+
+
+function resetTimer(){
+
+  pauseTimer();
+
+  timerSeconds=900;
+
+  updateTimer();
+}
+
+
+function setTimer(minutes){
+
+  pauseTimer();
+
+  timerSeconds=minutes*60;
+
+  updateTimer();
+}
+
+
+document.getElementById("startHome")
+.addEventListener("click",startTimer);
+
+document.getElementById("pauseHome")
+.addEventListener("click",pauseTimer);
+
+document.getElementById("resetHome")
+.addEventListener("click",resetTimer);
+
+document.getElementById("startSchedule")
+.addEventListener("click",startTimer);
+
+document.getElementById("pauseSchedule")
+.addEventListener("click",pauseTimer);
+
+document.getElementById("resetSchedule")
+.addEventListener("click",resetTimer);
+
+document.querySelectorAll(".timerChoice")
+.forEach(button=>{
+  button.addEventListener("click",()=>{
+    setTimer(Number(button.dataset.min));
+  });
+});
+
+
+/* ===============================
+   CALENDAR
+================================ */
+
+document.getElementById("calendarMonth")
+.addEventListener("change",renderCalendar);
+
+
+function renderCalendar(){
+
+  const value=
+    document.getElementById("calendarMonth").value;
+
+  if(!value)return;
+
+  const [year,month]=value.split("-").map(Number);
+
+  const first=new Date(year,month-1,1).getDay();
+  const days=new Date(year,month,0).getDate();
+
+  let html=`
+    <table class="calendar">
+    <thead>
+    <tr>
+      <th>Sun</th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thu</th>
+      <th>Fri</th>
+      <th>Sat</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+  `;
+
+  for(let i=0;i<first;i++){
+    html+="<td></td>";
+  }
+
+  for(let day=1;day<=days;day++){
+
+    const date=
+      year+"-"+
+      String(month).padStart(2,"0")+"-"+
+      String(day).padStart(2,"0");
+
+    html+=`
+      <td class="${date===today()?"today":""}"
+          data-date="${date}">
+        ${day}
+      </td>
+    `;
+
+    if((first+day)%7===0){
+      html+="</tr><tr>";
+    }
+  }
+
+  html+="</tr></tbody></table>";
+
+  document.getElementById("calendarBox").innerHTML=html;
+
+  document.querySelectorAll(".calendar td[data-date]")
+  .forEach(cell=>{
+    cell.addEventListener("click",()=>{
+      calendarDay(cell.dataset.date);
+    });
+  });
+}
+
+
+function calendarDay(date){
+
+  const s=schedules.filter(
+    x=>x.date===date
+  );
+
+  const n=notes.filter(
+    x=>x.date===date
+  );
+
+  let html=`<h3 style="margin-top:14px">🌷 ${date}</h3>`;
+
+  if(s.length){
+
+    html+="<h3 style='margin-top:10px'>🎀 Schedule</h3>";
+
+    s.forEach(x=>{
+      html+=`
+        <div class="item">
+          <b>${esc(x.time)}</b>
+          · ${esc(x.title)}
+        </div>
+      `;
+    });
+  }
+
+  if(n.length){
+
+    html+="<h3 style='margin-top:10px'>💌 Notes</h3>";
+
+    n.forEach(x=>{
+      html+=`
+        <div class="item">
+          <span class="tag">${esc(x.subject)}</span>
+          <b>${esc(x.title)}</b>
+          <p style="margin-top:5px">${esc(x.text)}</p>
+        </div>
+      `;
+    });
+  }
+
+  if(!s.length && !n.length){
+    html+=`
+      <div class="empty">
+        Nothing saved for this day 🌷
+      </div>
+    `;
+  }
+
+  document.getElementById("calendarDetails").innerHTML=html;
+}
+
+
+/* ===============================
+   RENDER SUBJECTS
+================================ */
+
+function renderSubjects(){
+
+  document.getElementById("gradeDisplay").textContent=
+    school.grade;
+
+  document.getElementById("yearDisplay").textContent=
+    "SY "+school.year;
+
+
+  const manager=document.getElementById("subjectManager");
+
+  manager.innerHTML=school.subjects.map((s,i)=>`
+    <div class="item">
+
+      <div class="row">
+
+        <b>${esc(s.icon)} ${esc(s.name)}</b>
+
+        <div class="actions">
+
+          <button class="btn editSubject"
+                  data-index="${i}">
+            ✏️ Edit
+          </button>
+
+          <button class="btn danger deleteSubject"
+                  data-index="${i}">
+            🗑️ Delete
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  `).join("");
+
+
+  manager.querySelectorAll(".editSubject")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      editSubject(Number(btn.dataset.index));
+    });
+  });
+
+
+  manager.querySelectorAll(".deleteSubject")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      deleteSubject(Number(btn.dataset.index));
+    });
+  });
+
+
+  const container=
+    document.getElementById("subjectsContainer");
+
+
+  container.innerHTML=school.subjects.map((s,i)=>{
+
+    const list=tasks[s.name]||[];
+
+    const done=list.filter(x=>x.done).length;
+
+    const percent=list.length
+      ?Math.round(done/list.length*100)
+      :0;
+
+    return`
+      <div class="card subject-card">
+
+        <div class="row">
+
+          <div>
+            <div class="subject-icon">${esc(s.icon)}</div>
+            <h3>${esc(s.name)}</h3>
+          </div>
+
+          <span class="tag">${percent}%</span>
+
+        </div>
+
+        <div class="progress">
+          <div class="progress-bar"
+               style="width:${percent}%"></div>
+        </div>
+
+        <p class="muted" style="margin-top:5px">
+          ${done}/${list.length} completed
+        </p>
+
+        <div class="actions">
+
+          <button class="btn addTask"
+                  data-index="${i}">
+            ＋ Add Task
+          </button>
+
+        </div>
+
+        ${
+          list.length
+          ?
+          list.map(t=>`
+            <div class="item ${t.done?"done":""}">
+
+              <div class="row">
+
+                <span class="title">
+                  ${t.done?"✓":"○"}
+                  ${esc(t.text)}
+                </span>
+
+                <div class="actions">
+
+                  <button
+                    class="btn ${t.done?"green":""} taskDone"
+                    data-subject="${esc(s.name)}"
+                    data-id="${t.id}">
+                    ${t.done?"Undo":"Done"}
+                  </button>
+
+                  <button
+                    class="btn danger taskDelete"
+                    data-subject="${esc(s.name)}"
+                    data-id="${t.id}">
+                    Delete
+                  </button>
+
+                </div>
+
+              </div>
+
+            </div>
+          `).join("")
+          :
+          `<div class="empty" style="margin-top:9px">
+            No tasks yet 🌷
+          </div>`
+        }
+
+      </div>
+    `;
+
+  }).join("");
+
+
+  container.querySelectorAll(".addTask")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      addTask(Number(btn.dataset.index));
+    });
+  });
+
+
+  container.querySelectorAll(".taskDone")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      toggleTask(
+        btn.dataset.subject,
+        Number(btn.dataset.id)
+      );
+    });
+  });
+
+
+  container.querySelectorAll(".taskDelete")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      deleteTask(
+        btn.dataset.subject,
+        Number(btn.dataset.id)
+      );
+    });
+  });
+
+
+  const select=
+    document.getElementById("noteSubject");
+
+  select.innerHTML=school.subjects.map(s=>
+    `<option value="${esc(s.name)}">
+      ${esc(s.name)}
+    </option>`
+  ).join("");
+}
+
+
+/* ===============================
+   RENDER SCHEDULE
+================================ */
+
+function renderSchedule(){
+
+  const list=schedules
+    .filter(x=>x.date===today())
+    .sort((a,b)=>a.time.localeCompare(b.time));
+
+  const box=document.getElementById("scheduleList");
+
+  if(!list.length){
+
+    box.innerHTML=
+      `<div class="empty">
+        No schedule for today 🌷
+      </div>`;
+
+    return;
+  }
+
+  box.innerHTML=list.map(x=>`
+    <div class="item ${x.done?"done":""}">
+
+      <div class="row">
+
+        <span class="title">
+          ${x.done?"✓":"○"}
+          <b>${esc(x.time)}</b>
+          · ${esc(x.title)}
+          <br>
+          <span class="tag">${esc(x.type)}</span>
+        </span>
+
+        <div class="actions">
+
+          <button class="btn ${x.done?"green":""} scheduleDone"
+                  data-id="${x.id}">
+            ${x.done?"Undo":"Done"}
+          </button>
+
+          <button class="btn danger scheduleDelete"
+                  data-id="${x.id}">
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  `).join("");
+
+
+  box.querySelectorAll(".scheduleDone")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      toggleSchedule(Number(btn.dataset.id));
+    });
+  });
+
+
+  box.querySelectorAll(".scheduleDelete")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      deleteSchedule(Number(btn.dataset.id));
+    });
+  });
+}
+
+
+/* ===============================
+   RENDER NOTES
+================================ */
+
+function renderNotes(){
+
+  const box=document.getElementById("notesList");
+
+  if(!notes.length){
+
+    box.innerHTML=
+      `<div class="empty">
+        No notes yet 💌
+      </div>`;
+
+    return;
+  }
+
+  box.innerHTML=notes.map(n=>`
+    <div class="item">
+
+      <div class="row">
+
+        <div>
+          <span class="tag">${esc(n.subject)}</span>
+
+          <span class="muted">${esc(n.date)}</span>
+
+          <h3 style="margin-top:6px">
+            ${esc(n.title)}
+          </h3>
+        </div>
+
+        <div class="actions">
+
+          <button class="btn editNote"
+                  data-id="${n.id}">
+            Edit
+          </button>
+
+          <button class="btn danger deleteNote"
+                  data-id="${n.id}">
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+
+      <p style="white-space:pre-wrap;margin-top:8px">
+        ${esc(n.text)}
+      </p>
+
+    </div>
+  `).join("");
+
+
+  box.querySelectorAll(".editNote")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      editNote(Number(btn.dataset.id));
+    });
+  });
+
+
+  box.querySelectorAll(".deleteNote")
+  .forEach(btn=>{
+    btn.addEventListener("click",()=>{
+      deleteNote(Number(btn.dataset.id));
+    });
+  });
+}
+
+
+/* ===============================
+   RENDER SAVINGS
+================================ */
+
+function renderSavings(){
+
+  let saved=0;
+  let target=0;
+
+  savings.forEach(x=>{
+    saved+=Number(x.current);
+    target+=Number(x.target);
+  });
+
+  document.getElementById("totalSaved").textContent=
+    money(saved);
+
+  document.getElementById("totalTarget").textContent=
+    money(target);
+
+  const percent=target
+    ?Math.min(100,Math.round(saved/target*100))
+    :0;
+
+  document.getElementById("savingPercent").textContent=
+    percent+"%";
+
+  document.getElementById("savingBar").style.width=
+    percent+"%";
+
+
+  const box=document.getElementById("savingsList");
+
+  if(!savings.length){
+
+    box.innerHTML=
+      `<div class="empty">
+        No savings goals yet 🪙
+      </div>`;
+
+    return;
+  }
+
+  box.innerHTML=savings.map(x=>{
+
+    const p=x.target
+      ?Math.min(100,Math.round(x.current/x.target*100))
+      :0;
+
+    return`
+      <div class="item">
+
+        <div class="row">
+
+          <div>
+            <h3>🪙 ${esc(x.name)}</h3>
+
+            <div class="big">
+              ${money(x.current)}
+            </div>
+
+            <span class="muted">
+              ${
+                x.current>=x.target
+                ?"🎉 Goal reached!"
+                :money(x.target-x.current)+" left"
+              }
+            </span>
+          </div>
+
+          <span class="tag">${p}%</span>
+
+        </div>
+
+        <div class="progress" style="margin-top:9px">
+          <div class="progress-bar"
+               style="width:${p}%"></div>
+        </div>
+
+        <div class="actions">
+
+          <button class="btn green addMoney"
+                  data-id="${x.id}">
+            ＋ Add
+          </button>
+
+          <button class="btn yellow removeMoney"
+                  data-id="${x.id}">
+            − Remove
+          </button>
+
+          <button class="btn editGoal"
+                  data-id="${x.id}">
+            Edit
+          </button>
+
+          <button class="btn danger deleteGoal"
+                  data-id="${x.id}">
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+    `;
+
+  }).join("");
+
+
+  box.querySelectorAll(".addMoney")
+  .forEach(b=>{
+    b.addEventListener("click",()=>{
+      addMoney(Number(b.dataset.id));
+    });
+  });
+
+  box.querySelectorAll(".removeMoney")
+  .forEach(b=>{
+    b.addEventListener("click",()=>{
+      removeMoney(Number(b.dataset.id));
+    });
+  });
+
+  box.querySelectorAll(".editGoal")
+  .forEach(b=>{
+    b.addEventListener("click",()=>{
+      editGoal(Number(b.dataset.id));
+    });
+  });
+
+  box.querySelectorAll(".deleteGoal")
+  .forEach(b=>{
+    b.addEventListener("click",()=>{
+      deleteGoal(Number(b.dataset.id));
+    });
+  });
+}
+
+
+/* ===============================
+   RENDER SLEEP
+================================ */
+
+function renderSleep(){
+
+  document.getElementById("sleepGoal").value=
+    sleepGoal;
+
+  const box=document.getElementById("sleepList");
+
+  if(!sleeps.length){
+
+    box.innerHTML=
+      `<div class="empty">
+        No sleep records yet 🌙
+      </div>`;
+
+  }else{
+
+    box.innerHTML=sleeps.map(x=>`
+      <div class="item">
+
+        <div class="row">
+
+          <div>
+            <b>🌙 ${esc(x.date)}</b>
+
+            <div>
+              ${esc(x.bed)}
+              →
+              ${esc(x.wake)}
+              ·
+              <b>${sleepFormat(x.duration)}</b>
+            </div>
+
+            ${
+              x.note
+              ?`<div class="muted">${esc(x.note)}</div>`
+              :""
+            }
+
+          </div>
+
+          <button class="btn danger sleepDelete"
+                  data-id="${x.id}">
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+    `).join("");
+
+
+    box.querySelectorAll(".sleepDelete")
+    .forEach(b=>{
+      b.addEventListener("click",()=>{
+        deleteSleep(Number(b.dataset.id));
+      });
+    });
+  }
+
+
+  let average=0;
+
+  if(sleeps.length){
+
+    average=Math.round(
+      sleeps.reduce(
+        (sum,x)=>sum+x.duration,
+        0
+      )/sleeps.length
+    );
+  }
+
+  document.getElementById("averageSleep").textContent=
+    sleepFormat(average);
+}
+
+
+/* ===============================
+   RENDER HOME
+================================ */
+
+function renderHome(){
+
+  let allTasks=[];
+
+  school.subjects.forEach(s=>{
+    allTasks=allTasks.concat(tasks[s.name]||[]);
+  });
+
+  const todaySchedule=schedules
+    .filter(x=>x.date===today());
+
+  const total=
+    allTasks.length+
+    todaySchedule.length;
+
+  const done=
+    allTasks.filter(x=>x.done).length+
+    todaySchedule.filter(x=>x.done).length;
+
+  const percent=total
+    ?Math.round(done/total*100)
+    :0;
+
+  document.getElementById("progressText").textContent=
+    percent+"%";
+
+  document.getElementById("progressBar").style.width=
+    percent+"%";
+
+  document.getElementById("progressSub").textContent=
+    total
+    ?done+" of "+total+" completed"
+    :"Ready for a lovely day!";
+
+
+  const next=todaySchedule
+    .filter(x=>!x.done)
+    .sort((a,b)=>a.time.localeCompare(b.time))[0];
+
+  document.getElementById("nextActivity").textContent=
+    next?next.title:"All done!";
+
+  document.getElementById("nextTime").textContent=
+    next?next.time+" · "+next.type:"Nothing left today.";
+
+
+  const homeSchedule=
+    document.getElementById("homeSchedule");
+
+  if(!todaySchedule.length){
+
+    homeSchedule.innerHTML=
+      `<div class="empty">
+        No schedule today 🌷
+      </div>`;
+
+  }else{
+
+    homeSchedule.innerHTML=
+      todaySchedule
+      .sort((a,b)=>a.time.localeCompare(b.time))
+      .slice(0,5)
+      .map(x=>`
+        <div class="item ${x.done?"done":""}">
+
+          <div class="row">
+
+            <span class="title">
+              ${x.done?"✓":"○"}
+              <b>${esc(x.time)}</b>
+              · ${esc(x.title)}
+            </span>
+
+            <button class="btn ${x.done?"green":""} homeScheduleDone"
+                    data-id="${x.id}">
+              ${x.done?"Undo":"Done"}
+            </button>
+
+          </div>
+
+        </div>
+      `).join("");
+
+
+    homeSchedule
+    .querySelectorAll(".homeScheduleDone")
+    .forEach(b=>{
+      b.addEventListener("click",()=>{
+        toggleSchedule(Number(b.dataset.id));
+      });
+    });
+  }
+
+
+  document.getElementById("homeSubjects").innerHTML=
+    school.subjects.map(s=>{
+
+      const list=tasks[s.name]||[];
+
+      const d=list.filter(x=>x.done).length;
+
+      const p=list.length
+        ?Math.round(d/list.length*100)
+        :0;
+
+      return`
+        <div class="item">
+
+          <div class="row">
+            <b>${esc(s.icon)} ${esc(s.name)}</b>
+            <span>${p}%</span>
+          </div>
+
+          <div class="progress">
+            <div class="progress-bar"
+                 style="width:${p}%"></div>
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
+
+
+  const totalSaved=savings.reduce(
+    (sum,x)=>sum+Number(x.current),
+    0
+  );
+
+  document.getElementById("homeSaved").textContent=
+    money(totalSaved);
+
+  document.getElementById("homeGoals").textContent=
+    savings.length+
+    " savings goal"+
+    (savings.length===1?"":"s");
+
+
+  const homeNotes=
+    document.getElementById("homeNotes");
+
+  if(!notes.length){
+
+    homeNotes.innerHTML=
+      `<div class="empty">
+        No notes yet 💌
+      </div>`;
+
+  }else{
+
+    homeNotes.innerHTML=
+      notes.slice(0,3).map(n=>`
+        <div class="item">
+
+          <span class="tag">
+            ${esc(n.subject)}
+          </span>
+
+          <b>${esc(n.title)}</b>
+
+          <div class="muted">
+            ${esc(n.date)}
+          </div>
+
+        </div>
+      `).join("");
+  }
+}
+
+
+/* ===============================
+   RENDER ALL
+================================ */
+
+function renderAll(){
+
+  document.getElementById("scheduleDate").value ||= today();
+  document.getElementById("noteDate").value ||= today();
+  document.getElementById("sleepDate").value ||= today();
+
+  document.getElementById("calendarMonth").value ||=
+    today().slice(0,7);
+
+  renderHome();
+  renderSchedule();
+  renderSubjects();
+  renderNotes();
+  renderSavings();
+  renderSleep();
+  renderCalendar();
+  updateTimer();
+}
+
+
+/* ===============================
+   START
+================================ */
+
+document.getElementById("scheduleDate").value=today();
+document.getElementById("noteDate").value=today();
+document.getElementById("sleepDate").value=today();
+document.getElementById("calendarMonth").value=today().slice(0,7);
+
+renderAll();
+
+</script>
 
 </body>
 </html>
